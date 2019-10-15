@@ -21,4 +21,4 @@ with:
   who-to-greet: 'Mona the Octocat'
 
 
-![](https://github.com/weide-zhou/ActionLearning1/workflows/localjavascriptAction/badge.svg)
+![](https://github.com/weide-zhou/JSAction1/workflows/localjavascriptAction/badge.svg)
