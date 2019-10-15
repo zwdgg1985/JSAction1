@@ -19,3 +19,6 @@ The time we greeted you.
 uses: actions/hello-world-javascript-action@v1
 with:
   who-to-greet: 'Mona the Octocat'
+
+
+![](https://github.com/weide-zhou/ActionLearning1/workflows/Hello world/badge.svg)
