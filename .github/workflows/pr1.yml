@@ -11,7 +11,7 @@ jobs:
     - name: bash script
       id: keyvalue
       run: |
-        echo "::set-output name=key1::${{ runner.OS }}-build"
+        echo "::set-output name=key1::${{ runner.OS }}"
       shell: bash
 
     - name: Cache node modules
@@ -21,9 +21,6 @@ jobs:
         key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           steps.keyvalue.output.key1
-          #${{ runner.OS }}-build-${{ env.cache-name }}-
-          ${{ runner.OS }}-build-
-          ${{ runner.OS }}-
 
     - name: Install Dependencies
       run: npm install
