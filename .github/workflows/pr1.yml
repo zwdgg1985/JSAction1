@@ -11,7 +11,7 @@ jobs:
     - name: bash script
       id: keyvalue
       run: |
-        echo "::set-output name=key1::${{ runner.OS }}-test2"
+        echo "::set-output name=key::${{ runner.OS }}-test2"
       shell: bash
 
     - name: Cache node modules
@@ -19,10 +19,10 @@ jobs:
       with:
         path: node_modules
         #key: ${{ runner.OS }}-test-build-${{ hashFiles('**/package-lock.json') }}
-        key: ${{ steps.keyvalue.outputs.key1 }}
+        key: ${{ steps.keyvalue.outputs.key }}
         restore-keys: |
-          ${{ runner.OS }}-build-${{ env.cache-name }}-
-          ${{ runner.OS }}-build-
+          ${{ runner.OS }}-os-${{ env.cache-name }}-
+          ${{ runner.OS }}-os-
           ${{ runner.OS }}-
 
     - name: Install Dependencies
