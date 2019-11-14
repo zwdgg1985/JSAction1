@@ -19,10 +19,10 @@ jobs:
       uses: actions/cache@v1
       with:
         path: node_modules
-        key: ${{ runner.OS }}-test-build-${{ hashFiles('**/package-lock.json') }}
-        #key: ${{ steps.keyvalue.outputs.key1 }}
+        #key: ${{ runner.OS }}-test-build-${{ hashFiles('**/package-lock.json') }}
+        key: ${{ runner.OS }}-test-build-${{ steps.keyvalue.outputs.key1 }}
         restore-keys: |
-          ${{ steps.keyvalue.outputs.key2 }}
+          ${{ runner.OS }}-test-build-${{ steps.keyvalue.outputs.key2 }}
           ${{ runner.OS }}-os-
           ${{ runner.OS }}-
 
