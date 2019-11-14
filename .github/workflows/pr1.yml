@@ -18,8 +18,8 @@ jobs:
       uses: actions/cache@v1
       with:
         path: node_modules
-        #key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
-        key: steps.keyvalue.output.key1
+        key: ${{ runner.OS }}-test-build-${{ hashFiles('**/package-lock.json') }}
+        #key: steps.keyvalue.output.key1
         restore-keys: |
           steps.keyvalue.output.key1
           test1
