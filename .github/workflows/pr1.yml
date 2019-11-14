@@ -12,7 +12,7 @@ jobs:
       id: keyvalue
       run: |
         #echo "::set-output name=key::${{ runner.OS }}-test2"
-        sh ./cache.sh
+        sh cache.sh
       shell: bash
 
     - name: Cache node modules
