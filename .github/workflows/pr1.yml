@@ -11,9 +11,7 @@ jobs:
     - name: bash script
       id: keyvalue
       run: |
-        #echo "::set-output name=key::${{ runner.OS }}-test2"
         sh cache.sh
-      shell: bash
 
     - name: Cache node modules
       uses: actions/cache@v1
