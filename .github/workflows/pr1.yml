@@ -11,7 +11,7 @@ jobs:
     - name: bash script
       id: keyvalue
       run: |
-        echo "::set-output name=key1::${{ runner.OS }}"
+        echo "::set-output name=key1::${{ runner.OS }}-test"
       shell: bash
 
     - name: Cache node modules
