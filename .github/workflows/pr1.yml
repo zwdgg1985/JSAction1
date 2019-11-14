@@ -11,8 +11,10 @@ jobs:
     - name: setkey
       id: keyvalue
       run: |
-        echo "::set-output name=key1::${{ runner.OS }}-test-check1"
-        echo "::set-output name=key2::${{ runner.OS }}-test-check2"
+        #echo "::set-output name=key1::${{ runner.OS }}-test-check1"
+        #echo "::set-output name=key2::${{ runner.OS }}-test-check2"
+        ls -l
+        sh cache.sh
       shell: bash
 
     - name: Cache node modules
