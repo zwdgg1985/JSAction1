@@ -21,7 +21,7 @@ jobs:
         key: ${{ runner.OS }}-test-build-${{ hashFiles('**/package-lock.json') }}
         #key: steps.keyvalue.output.key1
         restore-keys: |
-          ${{ steps.keyvalue.output.key1 }}
+          ${{ steps.keyvalue.outputs.key1 }}
           test1
           test2
 
