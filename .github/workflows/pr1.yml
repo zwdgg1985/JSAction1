@@ -3,7 +3,7 @@ name: Caching with npm
 on: push
 jobs:
   build:
-    runs-on: [windows-latest, ubuntu-latest]
+    runs-on: [ubuntu-latest]
 
     steps:
     - uses: actions/checkout@v1
