@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
 echo "keyvalue"
-
-echo "::set-output name=key1::${{ runner.OS }}-test-check1"
-echo "::set-output name=key2::${{ runner.OS }}-test-check2"
+time=$(date)
+echo "::set-output name=key1::$time-test-check1"
+echo "::set-output name=key2::$time-test-check2"
