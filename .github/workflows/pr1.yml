@@ -8,10 +8,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: bash script
+    - name: setkey
       id: keyvalue
       run: |
-        sh cache.sh
+        echo "::set-output name=key::${{ runner.OS }}-test3"
+      shell: bash
 
     - name: Cache node modules
       uses: actions/cache@v1
