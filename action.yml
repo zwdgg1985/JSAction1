@@ -18,6 +18,7 @@ outputs:
 runs:
   using: 'node12'
   main: 'index.js'
+runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
