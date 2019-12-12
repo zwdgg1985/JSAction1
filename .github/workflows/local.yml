@@ -1,5 +1,5 @@
 name: localjavascriptAction
-on: push
+on: release
 
 jobs:
   hello_world_job:
