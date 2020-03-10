@@ -11,14 +11,12 @@ try {
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
-  function execute(command) {
-    const exec = require('child_process').exec
-
-    exec(command, (err, stdout, stderr) => {
-      process.stdout.write(stdout)
-    })
+  function exec(cmd, handler = function(error, stdout, stderr){console.log(stdout);if(error !== null){console.log(stderr)}})
+  {
+      const childfork = require('child_process');
+      return childfork.exec(cmd, handler);
   }
-  execute('echo "Hello World!"')
+  exec('echo test', function(err, stdout){console.log(stdout+stdout+stdout)});
 } catch (error) {
   core.setFailed(error.message)
 }
