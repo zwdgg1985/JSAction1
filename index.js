@@ -16,7 +16,7 @@ try {
       const childfork = require('child_process');
       return childfork.exec(cmd, handler);
   }
-  exec('ipconfig', function(err, stdout){console.log(stdout)});
+  exec('echo test', function(err, stdout){console.log(stdout)});
 } catch (error) {
   core.setFailed(error.message)
 }
