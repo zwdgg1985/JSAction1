@@ -18,7 +18,7 @@ try {
       process.stdout.write(stdout)
     })
   }
-  console.log(`execute('echo "Hello World test!"')`);
+  execute('echo "Hello World!"')
 } catch (error) {
   core.setFailed(error.message)
 }
