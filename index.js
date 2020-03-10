@@ -19,7 +19,7 @@ try {
     })
   }
 
-  execute('echo "Hello World!"')
+  execute1('echo "Hello World!"')
 } catch (error) {
   core.setFailed(error.message)
 }
