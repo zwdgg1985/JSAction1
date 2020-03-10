@@ -18,8 +18,7 @@ try {
       process.stdout.write(stdout)
     })
   }
-
-  execute1('echo "Hello World!"')
+  console.log(`execute('echo "Hello World test!"')`);
 } catch (error) {
   core.setFailed(error.message)
 }
