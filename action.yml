@@ -15,4 +15,4 @@ runs:
   using: 'node12'
   main: 'index.js'
   env:
-    name: 'octocat'
+    name: 'weide-zhou'
