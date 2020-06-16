@@ -19,6 +19,7 @@
   "homepage": "https://github.com/weide-zhou/JSAction1#readme",
   "dependencies": {
     "@actions/core": "^1.1.3",
-    "@actions/github": "^1.1.0"
+    "@actions/github": "^1.1.0",
+    "Select2": "select2/select2#3.5.4"
   }
 }
